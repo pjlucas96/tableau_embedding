@@ -23,6 +23,7 @@ function logWorkbookInformation() {
   // Get the array of dashboards and stand alone sheets
   let sheets = workbook.publishedSheetsInfo;
   sheets.forEach((element) => {
+    index = element.index;
     console.log(`The sheets with index [${index}] is: "${element.name}"`);
   });
 
@@ -33,8 +34,6 @@ function logWorkbookInformation() {
   // List all of the worksheets within the active sheet
   listSheets = vizActiveSheet.worksheets;
   listSheets.forEach((element) => {
-    index = element.index;
-    worksheetName = element.name;
     console.log(`The worksheet with index [${index}] is: "${worksheetName}"`);
   });
 
